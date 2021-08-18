@@ -1,0 +1,153 @@
+.grey {
+  background-color: $color-light-grey;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  height: 13vh;
+  align-items: center;
+  animation: fadeInLight 1s;
+
+  &--work {
+    background-color: $color-dark-orange;
+  }
+  &--break {
+    background-color: $color-dark-turqoise;
+  }
+  &--longbreak {
+    background-color: $color-dark-purple;
+  }
+  &--neutral {
+    background-color: $color-grey-dark;
+  }
+
+  &__title {
+    font-family: "Notable", sans-serif;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    color: white;
+    font-size: 3.3rem;
+  }
+  &__logo {
+    margin-left: 1rem;
+    color: white;
+    cursor: pointer;
+  }
+  &__toggle {
+    display: none;
+  }
+  &__navlinks {
+    color: white;
+    font-size: 2.5rem;
+    list-style: none;
+
+    &--active {
+      color: white;
+      font-size: 2.5rem;
+      list-style: none;
+    }
+
+    &--link {
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 0.2rem;
+      padding: 1rem;
+      margin: 1rem;
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-size: 2.5rem;
+      font-weight: 700;
+      border-radius: 10px;
+      &--signup {
+        font-family: "Oswald", sans-serif;
+        letter-spacing: 0.2rem;
+        margin: 1rem;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 10px;
+        &:hover {
+          transition: all 0.3s ease-out;
+        }
+      }
+      &:hover {
+        background-color: $color-dark-purple;
+        transition: all 0.3s ease-out;
+      }
+
+      &--signup {
+        display: inline-block;
+        background-color: $color-dark-purple;
+        padding: 1rem;
+        font-weight: 900;
+        font-size: 2.5rem;
+        border-radius: 10px;
+        &:hover {
+          background-color: $color-light-black;
+          transition: all 0.2s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .header {
+    position: relative;
+  }
+  .header__navlinks--link {
+    padding: 0px;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+  }
+  .header__navlinks--link--signup {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+  .header__toggle {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+  }
+  .header__navlinks {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-light-pink;
+    width: 100%;
+    position: absolute;
+    top: 24vh;
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.5s ease;
+  }
+  .header__navlinks--hidden {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-light-pink;
+    width: 100%;
+    position: absolute;
+    top: 5.1rem;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .header {
+    height: 22vh;
+  }
+  .header__navlinks {
+    top: 22vh;
+  }
+}
+
+@media screen and (min-height: 401px) {
+  .header__navlinks {
+    top: 11.7vh;
+  }
+}
