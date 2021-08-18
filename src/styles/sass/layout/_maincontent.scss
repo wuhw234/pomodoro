@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: $color-grey-dark;
-  height: 87vh;
+  height: 84vh;
 
   &--work {
     background-image: linear-gradient($color-orange, $color-dark-orange);
@@ -59,7 +59,6 @@
   }
 }
 
-
 .tooltip {
   color: $color-white;
   position: relative;
@@ -80,16 +79,45 @@
   }
 }
 
-@media screen and (max-height: 400px) {
-  .main {
-    height: 77.63vh;
-  }
-  .statcontainer {
-    font-size: 9vh;
+.logincontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh 0;
+  border: 5px solid black;
+  color: $color-grey-dark;
+  font-weight: 800;
+  font-size: 4rem;
+  background-color: $color-dark-turqoise;
+  border-radius: 10px;
+  padding: 30px;
+  border-radius: 20px;
+  animation: fadeIn 1s;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: $color-grey-dark;
+    background-color: $color-white;
+    border: 5px solid blue;
+    &__label {
+      display: block;
+    }
   }
 }
+
 @media screen and (max-width: 695px) {
   .statcontainer {
-    font-size: 6vh;
+    font-size: 3.3vw;
+  }
+}
+@media screen and (max-height: 650px) {
+  .statcontainer {
+    font-size: 4.5vh;
+  }
+}
+@media screen and (max-height: 280px) {
+  .statcontainer {
+    font-size: 3.3vw;
   }
 }

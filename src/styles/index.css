@@ -16,7 +16,7 @@ html {
 
 @keyframes fadeInLight {
   0% {
-    opacity: 0.8; }
+    opacity: 0.7; }
   100% {
     opacity: 1; } }
 
@@ -112,7 +112,7 @@ html {
   align-items: center;
   justify-content: space-between;
   background-color: #777;
-  height: 87vh; }
+  height: 84vh; }
   .main--work {
     background-image: linear-gradient(#e8a87c, #e27d60); }
   .main--break {
@@ -175,23 +175,46 @@ html {
   .tooltip:hover::after {
     transform: scale(1); }
 
-@media screen and (max-height: 400px) {
-  .main {
-    height: 77.63vh; }
-  .statcontainer {
-    font-size: 9vh; } }
+.logincontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh 0;
+  border: 5px solid black;
+  color: #777;
+  font-weight: 800;
+  font-size: 4rem;
+  background-color: #41b3a3;
+  border-radius: 10px;
+  padding: 30px;
+  border-radius: 20px;
+  animation: fadeIn 1s; }
+  .logincontainer__form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #777;
+    background-color: #fff;
+    border: 5px solid blue; }
+    .logincontainer__form__label {
+      display: block; }
 
 @media screen and (max-width: 695px) {
   .statcontainer {
-    font-size: 6vh; } }
+    font-size: 3.3vw; } }
 
-.grey {
-  background-color: #c09ba3; }
+@media screen and (max-height: 650px) {
+  .statcontainer {
+    font-size: 4.5vh; } }
+
+@media screen and (max-height: 280px) {
+  .statcontainer {
+    font-size: 3.3vw; } }
 
 .header {
   display: flex;
   justify-content: space-around;
-  height: 13vh;
+  height: 16vh;
   align-items: center;
   animation: fadeInLight 1s; }
   .header--work {
@@ -200,22 +223,31 @@ html {
     background-color: #41b3a3; }
   .header--longbreak {
     background-color: #643e4693; }
-  .header--neutral {
-    background-color: #777; }
+  .header--customize {
+    background-color: #9fc460; }
+  .header--login {
+    background-color: #8bbee8ff; }
+  .header--signup {
+    background-color: #d8ba9b; }
   .header__title {
     font-family: "Notable", sans-serif;
-    display: flex;
+    letter-spacing: 0.6rem;
+    position: relative;
     align-items: center;
     font-weight: 900;
     color: white;
     font-size: 3.3rem; }
   .header__logo {
+    position: absolute;
+    top: 33%;
+    right: 13.5%;
     margin-left: 1rem;
     color: white;
     cursor: pointer; }
   .header__toggle {
     display: none; }
   .header__navlinks {
+    top: 16vh;
     color: white;
     font-size: 2.5rem;
     list-style: none; }
@@ -234,6 +266,8 @@ html {
       font-size: 2.5rem;
       font-weight: 700;
       border-radius: 10px; }
+      .header__navlinks--link--chosen {
+        background-color: #c09ba3; }
       .header__navlinks--link--signup {
         font-family: "Oswald", sans-serif;
         letter-spacing: 0.2rem;
@@ -258,6 +292,12 @@ html {
         .header__navlinks--link--signup:hover {
           background-color: #643e46ff;
           transition: all 0.2s; }
+
+@media screen and (max-width: 400px) {
+  .header {
+    justify-content: center; }
+  .header__title {
+    display: none; } }
 
 @media screen and (max-width: 1050px) {
   .header {
@@ -297,14 +337,12 @@ html {
     transition: all 0.5s ease; } }
 
 @media screen and (max-height: 400px) {
-  .header {
-    height: 22vh; }
   .header__navlinks {
-    top: 22vh; } }
+    top: 16vh; } }
 
 @media screen and (min-height: 401px) {
   .header__navlinks {
-    top: 11.7vh; } }
+    top: 16vh; } }
 
 .timerbox {
   display: flex;

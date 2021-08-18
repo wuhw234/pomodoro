@@ -1,7 +1,7 @@
 import { isTemplateElement } from "@babel/types";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { BiTime } from "react-icons/bi";
+import { BsFillSquareFill } from "react-icons/bs";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Links } from "./Links";
 
@@ -11,10 +11,12 @@ const Navbar = ({ background, page }) => {
 
   return (
     <header className={`header header--${background}`}>
-      <div className="header__title">
-        PomoBlock
-        <BiTime size={40} className="header__logo" />
-      </div>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <div className="header__title">
+          Timebl
+          <BsFillSquareFill size={25} className="header__logo" /> x
+        </div>
+      </Link>
 
       {clicked ? (
         <FaTimes
@@ -38,29 +40,27 @@ const Navbar = ({ background, page }) => {
         >
           {Links.map((link, index) => {
             return (
-              <Link to={link.url}>
-                <a
-                  className={
-                    page === link.theme
-                      ? `header__navlinks--link grey`
-                      : `header__navlinks--link`
-                  }
-                >
-                  {link.title}
-                </a>
+              <Link
+                to={link.url}
+                className={
+                  page === link.theme
+                    ? `header__navlinks--link header__navlinks--link--chosen`
+                    : `header__navlinks--link`
+                }
+              >
+                <a>{link.title}</a>
               </Link>
             );
           })}
-          <Link to="/signup">
-            <a
-              className={
-                page === "signup"
-                  ? `header__navlinks--link--signup grey`
-                  : `header__navlinks--link--signup`
-              }
-            >
-              Sign Up
-            </a>
+          <Link
+            className={
+              page === "signup"
+                ? `header__navlinks--link--signup grey`
+                : `header__navlinks--link--signup`
+            }
+            to="/signup"
+          >
+            <a>Sign Up</a>
           </Link>
         </div>
       }

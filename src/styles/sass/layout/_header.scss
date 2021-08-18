@@ -1,10 +1,7 @@
-.grey {
-  background-color: $color-light-grey;
-}
 .header {
   display: flex;
   justify-content: space-around;
-  height: 13vh;
+  height: 16vh;
   align-items: center;
   animation: fadeInLight 1s;
 
@@ -17,19 +14,29 @@
   &--longbreak {
     background-color: $color-dark-purple;
   }
-  &--neutral {
-    background-color: $color-grey-dark;
+  &--customize {
+    background-color: $color-green;
+  }
+  &--login {
+    background-color: $color-blue;
+  }
+  &--signup {
+    background-color: $color-tan;
   }
 
   &__title {
     font-family: "Notable", sans-serif;
-    display: flex;
+    letter-spacing: 0.6rem;
+    position: relative;
     align-items: center;
     font-weight: 900;
     color: white;
     font-size: 3.3rem;
   }
   &__logo {
+    position: absolute;
+    top: 33%;
+    right: 13.5%;
     margin-left: 1rem;
     color: white;
     cursor: pointer;
@@ -38,6 +45,7 @@
     display: none;
   }
   &__navlinks {
+    top: 16vh;
     color: white;
     font-size: 2.5rem;
     list-style: none;
@@ -59,6 +67,9 @@
       font-size: 2.5rem;
       font-weight: 700;
       border-radius: 10px;
+      &--chosen {
+        background-color: $color-light-grey;
+      }
       &--signup {
         font-family: "Oswald", sans-serif;
         letter-spacing: 0.2rem;
@@ -90,6 +101,15 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    justify-content: center;
+  }
+  .header__title {
+    display: none;
   }
 }
 
@@ -138,16 +158,13 @@
 }
 
 @media screen and (max-height: 400px) {
-  .header {
-    height: 22vh;
-  }
   .header__navlinks {
-    top: 22vh;
+    top: 16vh;
   }
 }
 
 @media screen and (min-height: 401px) {
   .header__navlinks {
-    top: 11.7vh;
+    top: 16vh;
   }
 }

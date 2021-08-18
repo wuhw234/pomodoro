@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const Signup = () => {
   return (
     <div>
-      <Navbar background="neutral" page="signup"/>
+      <Navbar background="signup" page="signup"/>
       Signup
     </div>
   );

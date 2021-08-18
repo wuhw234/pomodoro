@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const Customize = () => {
   return (
     <div>
-      <Navbar background="neutral" page="customize" />
+      <Navbar background="customize" page="customize" />
       Customize
     </div>
   );
