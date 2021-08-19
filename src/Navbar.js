@@ -1,4 +1,3 @@
-import { isTemplateElement } from "@babel/types";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { BsFillSquareFill } from "react-icons/bs";
@@ -53,14 +52,10 @@ const Navbar = ({ background, page }) => {
             );
           })}
           <Link
-            className={
-              page === "signup"
-                ? `header__navlinks--link--signup grey`
-                : `header__navlinks--link--signup`
-            }
-            to="/signup"
+            className="header__navlinks--link--signup"
+            to="/login"
           >
-            <a>Sign Up</a>
+            <a>Log In/Sign Up</a>
           </Link>
         </div>
       }

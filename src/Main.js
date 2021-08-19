@@ -72,7 +72,7 @@ const Main = () => {
               </a>
               :
             </div>
-            <div className="container">
+            <div className="boxcontainer">
               {Pomos.map((pomo) => (
                 <div className={`box box--spin`}></div>
               ))}

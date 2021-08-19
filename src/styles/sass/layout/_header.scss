@@ -57,8 +57,8 @@
     }
 
     &--link {
-      font-family: "Oswald", sans-serif;
-      letter-spacing: 0.2rem;
+      font-family: "Notable", sans-serif;
+      letter-spacing: 0.5rem;
       padding: 1rem;
       margin: 1rem;
       display: inline-block;
@@ -71,8 +71,8 @@
         background-color: $color-light-grey;
       }
       &--signup {
-        font-family: "Oswald", sans-serif;
-        letter-spacing: 0.2rem;
+        font-family: "Notable", sans-serif;
+        letter-spacing: 0.5rem;
         margin: 1rem;
         display: inline-block;
         color: white;
@@ -118,12 +118,12 @@
     position: relative;
   }
   .header__navlinks--link {
-    padding: 0px;
+    padding: 3vh;
     margin: 0 0 0.5rem 0;
     text-align: center;
   }
   .header__navlinks--link--signup {
-    padding: 0px;
+    padding: 3vh;
     margin: 0px;
     text-align: center;
   }
@@ -141,7 +141,7 @@
     top: 24vh;
     left: 0;
     opacity: 1;
-    z-index: 1;
+    z-index: 100;
     transition: all 0.5s ease;
   }
   .header__navlinks--hidden {

@@ -23,7 +23,7 @@
   font-size: 5rem;
   font-family: "Oswald", sans-serif;
 }
-.container {
+.boxcontainer {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeate(8, 1fr);
@@ -79,32 +79,22 @@
   }
 }
 
-.logincontainer {
+
+.loginmain {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10vh 0;
-  border: 5px solid black;
-  color: $color-grey-dark;
-  font-weight: 800;
-  font-size: 4rem;
-  background-color: $color-dark-turqoise;
-  border-radius: 10px;
-  padding: 30px;
-  border-radius: 20px;
-  animation: fadeIn 1s;
-  &__form {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    color: $color-grey-dark;
-    background-color: $color-white;
-    border: 5px solid blue;
-    &__label {
-      display: block;
-    }
+  justify-content: center;
+  font-family: "Notable", sans-serif;
+  height: 84vh;
+
+  background-image: linear-gradient($color-light-blue, $color-blue);
+  &--signup {
+    background-image: linear-gradient($color-light-tan, $color-tan);
   }
+  height: 84vh;
 }
+
 
 @media screen and (max-width: 695px) {
   .statcontainer {

@@ -15,7 +15,7 @@ const Timer = ({ seconds, paused, setPaused, background }) => {
         {minutes}:{remainingSeconds < 10 && "0"}
         {remainingSeconds}{" "}
       </div>
-      <button onClick={() => setPaused(!paused)} className="btn">
+      <button onClick={() => setPaused(!paused)} className="startbtn">
         {paused ? "Start" : "Stop"}
       </button>
     </div>
