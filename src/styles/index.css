@@ -62,17 +62,16 @@ html {
 
 .startbtn {
   background-color: #fff;
+  font-family: "Notable", sans-serif;
   display: inline-block;
-  padding: 1.5rem 4rem;
+  padding: 3rem 6rem;
   text-transform: capitalize;
-  border-radius: 3rem;
   border: 4px solid #777;
   transition: all 0.2s;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
-  color: #c38d9e;
-  width: 19rem; }
+  color: #c38d9e; }
   .startbtn:hover {
     transform: translateY(-0.4rem);
     box-shadow: 0rem 1.5rem 2rem rgba(119, 119, 119, 0.377); }
@@ -99,15 +98,34 @@ html {
   .arrowbutton:active {
     transform: translateY(-0.1rem); }
 
-@media screen and (max-width: 690px) {
-  .btn {
-    font-size: 7vw;
-    padding: 3vw 5vw; } }
-
 @media screen and (max-height: 690px) {
-  .btn {
+  .startbtn {
     font-size: 7vh;
     padding: 4vh 6vh; } }
+
+@media screen and (max-height: 300px) {
+  .startbtn {
+    font-size: 7vh;
+    padding: 4vh 13vh; } }
+
+@media screen and (max-width: 320px) {
+  .startbtn {
+    margin: 2rem 2rem;
+    font-size: 7vw;
+    padding: 10vw 10vw; } }
+
+.error {
+  height: 100vh;
+  background-color: #c09ba3;
+  font-family: "Notable", sans-serif;
+  animation: fadeInLight 1s; }
+  .error h1 {
+    font-size: 9rem;
+    text-align: center;
+    color: #777; }
+  .error p {
+    text-align: center;
+    font-size: 3rem; }
 
 .main {
   display: flex;
@@ -126,8 +144,10 @@ html {
   display: flex;
   flex-direction: column;
   color: white;
-  font-size: 5rem;
-  font-family: "Oswald", sans-serif; }
+  font-size: 3rem;
+  font-family: "Notable", sans-serif; }
+  .statcontainer__text {
+    color: "#f8f8ff"; }
 
 .boxcontainer {
   display: grid;
@@ -189,17 +209,17 @@ html {
   .loginmain--signup {
     background-image: linear-gradient(#dfcfbf, #d8ba9b); }
 
-@media screen and (max-width: 695px) {
-  .statcontainer {
-    font-size: 3.3vw; } }
+@media screen and (max-height: 600px) {
+  .statcontainer__text {
+    font-size: 5vh; } }
 
-@media screen and (max-height: 650px) {
-  .statcontainer {
-    font-size: 4.5vh; } }
+@media screen and (max-height: 270px) {
+  .statcontainer__text {
+    font-size: 7vh; } }
 
-@media screen and (max-height: 280px) {
-  .statcontainer {
-    font-size: 3.3vw; } }
+@media screen and (max-width: 320px) {
+  .statcontainer__text {
+    font-size: 6vw; } }
 
 .header {
   display: flex;
@@ -219,6 +239,8 @@ html {
     background-color: #73a6cf; }
   .header--signup {
     background-color: #d8ba9b; }
+  .header--error {
+    background-color: #777; }
   .header__title {
     font-family: "Notable", sans-serif;
     letter-spacing: 0.6rem;
@@ -283,7 +305,7 @@ html {
           background-color: #643e46ff;
           transition: all 0.2s; }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .header {
     justify-content: center; }
   .header__title {
@@ -310,7 +332,7 @@ html {
     background-color: #f3b8c1;
     width: 100%;
     position: absolute;
-    top: 24vh;
+    top: 16vh;
     left: 0;
     opacity: 1;
     z-index: 100;
@@ -320,19 +342,12 @@ html {
     flex-direction: column;
     background-color: #f3b8c1;
     width: 100%;
+    z-index: 100;
     position: absolute;
     top: 5.1rem;
     left: -100%;
     opacity: 0;
     transition: all 0.5s ease; } }
-
-@media screen and (max-height: 400px) {
-  .header__navlinks {
-    top: 16vh; } }
-
-@media screen and (min-height: 401px) {
-  .header__navlinks {
-    top: 16vh; } }
 
 .login {
   display: flex;
@@ -343,7 +358,7 @@ html {
   animation: fadeIn 1s;
   background-color: #b7ddfc;
   font-family: "Notable", sans-serif;
-  letter-spacing: .5rem; }
+  letter-spacing: 0.5rem; }
   .login body {
     background: #fff;
     display: flex;
@@ -354,22 +369,21 @@ html {
     font-weight: bold;
     margin: 0; }
   .login p {
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     font-size: 1.4rem;
     font-weight: 100;
     line-height: 2rem;
     margin: 1rem 0 2rem; }
   .login a {
     color: #c38d9e;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     font-size: 1.4rem;
     text-decoration: none;
     margin: 1rem 0; }
   .login button {
     border-radius: 2rem;
     font-family: "Notable", sans-serif;
-    letter-spacing: .3rem;
-    border: 1px solid #73a6cf;
+    letter-spacing: 0.3rem;
     background-color: #5e5eee;
     color: #fff;
     font-size: 1.2rem;
@@ -377,6 +391,9 @@ html {
     padding: 1rem 4rem;
     text-transform: uppercase;
     transition: transform 100ms ease-in; }
+    .login button.switchbtn {
+      display: none;
+      border-radius: 0px; }
   .login button:active {
     transform: scale(0.95); }
   .login button:focus {
@@ -409,6 +426,8 @@ html {
     height: 70%;
     width: 60%; }
   .login .form-container {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0;
     height: 100%;
@@ -440,6 +459,10 @@ html {
     z-index: 5; }
   .login .container.right-panel-active .overlay-container {
     transform: translateX(-100%); }
+  .login .hidden {
+    opacity: 0; }
+  .login .show {
+    opacity: 1; }
   .login .overlay {
     background: #ff416c;
     background: -webkit-linear-gradient(to right, #90bce0, #73a6cf);
@@ -479,13 +502,148 @@ html {
   .login .container.right-panel-active .overlay-right {
     transform: translateX(20%); }
 
+@media screen and (max-width: 830px) {
+  .login .container {
+    width: 90%;
+    height: 90%; }
+  .login .sign-in-container {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all .5s linear; }
+  .login .sign-up-container {
+    transform: translateX(-100%);
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all .5s linear; }
+  .login .container.right-panel-active .sign-in-container {
+    opacity: 0;
+    transform: translateX(-100%); }
+  .login .container.right-panel-active .sign-up-container {
+    transform: translateX(0%);
+    opacity: 1;
+    z-index: 5;
+    animation: none; }
+  .login button.switchbtn {
+    display: inline-block; }
+  .login .overlay-container {
+    display: none; }
+  .login .form-container {
+    width: 100%; } }
+
+@media screen and (max-width: 450px) {
+  .login a {
+    font-size: 1rem; }
+  .login button {
+    padding: 0.5rem 2rem; }
+    .login button.switchbtn {
+      height: 15%; }
+  .login .container {
+    width: 90%;
+    height: 90%; }
+  .login input {
+    margin: 0.2rem 0; } }
+
+@media screen and (max-height: 330px) {
+  .login .container {
+    width: 97%;
+    height: 90%; }
+  .login h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+  .login input {
+    padding: 0.5rem 1rem;
+    margin: 2px 0; }
+  .login a {
+    display: none; }
+  .login p {
+    display: none; }
+  .login button {
+    padding: 0.5rem 2rem; }
+    .login button.switchbtn {
+      display: none; }
+  .login .form-container {
+    width: 50%; }
+  .login .overlay-container {
+    display: block; } }
+
+.customizecontainer {
+  display: flex;
+  font-family: "Notable", sans-serif;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 1s;
+  background-image: linear-gradient(#c1d1a6, #9fc460);
+  height: 84vh;
+  min-width: 60vw;
+  letter-spacing: .2rem; }
+  .customizecontainer ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */ }
+  .customizecontainer button {
+    font-family: "Notable", sans-serif;
+    letter-spacing: 0.3rem;
+    background-color: #9fc460;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    transition: transform 100ms ease-in;
+    width: 100%;
+    margin: 1rem 0;
+    transition: .2s all; }
+    .customizecontainer button:hover {
+      transform: translateY(-0.2rem); }
+    .customizecontainer button:active {
+      transform: translateY(-1px); }
+  .customizecontainer input {
+    width: 100%; }
+  .customizecontainer h1 {
+    margin: 2rem;
+    text-align: center; }
+  .customizecontainer label {
+    font-size: 1.3rem;
+    margin: .5rem; }
+  .customizecontainer .slider {
+    border-radius: 0px;
+    width: 100%;
+    opacity: .7;
+    transition: opacity .2s; }
+  .customizecontainer .slider:hover {
+    opacity: 1; }
+  .customizecontainer__timeform {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%; }
+    .customizecontainer__timeform--time {
+      display: flex;
+      flex-direction: column;
+      width: 20%; }
+  .customizecontainer__forms {
+    overflow: scroll;
+    overflow-x: hidden; }
+  .customizecontainer__form-container {
+    display: flex;
+    flex-direction: column; }
+
+@media screen and (max-width: 500px) {
+  .customizecontainer label {
+    font-size: 1rem; } }
+
 .timerbox {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  border-radius: 20px;
-  animation: fadeIn 1s; }
+  animation: fadeIn 1s;
+  min-height: 50vh;
+  min-width: 45vw; }
   .timerbox--break {
     background-color: #41b3a3;
     text-shadow: 0.8rem 0.8rem 0 #c38d9e; }
@@ -513,8 +671,7 @@ html {
 
 @media screen and (max-width: 690px) {
   .timerbox {
-    padding: 20px;
-    border-radius: 20px; }
+    padding: 20px; }
     .timerbox--break {
       text-shadow: 0.3em 0.3em 0 #c38d9e; }
     .timerbox--work {
@@ -524,19 +681,22 @@ html {
     .timerbox__time {
       font-size: 30vw;
       font-weight: 900;
-      color: white; } }
+      color: white; }
+    .timerbox__label {
+      font-size: 5vw; } }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 300px) {
   .timerbox {
     height: 76vh;
-    padding: 20px;
-    border-radius: 20px; }
+    padding: 20px; }
     .timerbox--break {
       text-shadow: 0.5rem 0.5rem 0 #c38d9e; }
     .timerbox--work {
       text-shadow: 0.5rem 0.5rem 0 #777; }
     .timerbox--longbreak {
       text-shadow: 0.5rem 0.5rem 0 #41b3a3; }
+    .timerbox__label {
+      font-size: 10vh; }
     .timerbox__time {
       font-size: 30vh;
       font-weight: 900;

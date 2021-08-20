@@ -1,0 +1,92 @@
+.customizecontainer {
+  display: flex;
+  font-family: "Notable", sans-serif;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 1s;
+  background-image: linear-gradient($color-light-green, $color-green);
+  height: 84vh;
+  min-width: 60vw;
+  letter-spacing: .2rem;
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
+  button {
+    font-family: "Notable", sans-serif;
+    letter-spacing: 0.3rem;
+    background-color: $color-green;
+    color: $color-white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    transition: transform 100ms ease-in;
+    width: 100%;
+    margin: 1rem 0;
+    transition: .2s all;
+    &:hover {
+      transform: translateY(-.2rem);
+    }
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
+  input {
+    width: 100%;
+  }
+  h1 {
+      margin: 2rem;
+      text-align: center;
+  }
+  label {
+    font-size: 1.3rem;
+      margin: .5rem;
+  }
+  .slider {
+    border-radius: 0px;
+    width: 100%;
+    opacity: .7;
+    transition: opacity .2s;
+  }
+  .slider:hover {
+    opacity: 1;
+  }
+  &__timeform {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+
+      &--time {
+          display: flex;
+          flex-direction: column;
+          width: 20%;
+      }
+  }
+
+  &__forms {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .customizecontainer {
+    label {
+      font-size: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 280px) {
+  .customizecontainer {
+    h1 {
+
+    }
+  }
+}

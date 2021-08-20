@@ -1,3 +1,18 @@
+.error {
+  height: 100vh;
+  background-color: $color-light-grey;
+  font-family: "Notable", sans-serif;
+  animation: fadeInLight 1s;
+  h1 {
+    font-size: 9rem; 
+    text-align: center;
+    color: $color-grey-dark;
+  }
+  p{
+    text-align: center;
+    font-size: 3rem;
+  }
+}
 .main {
   display: flex;
   align-items: center;
@@ -20,8 +35,11 @@
   display: flex;
   flex-direction: column;
   color: white;
-  font-size: 5rem;
-  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  font-family: "Notable", sans-serif;
+  &__text {
+    color: "#f8f8ff";
+  }
 }
 .boxcontainer {
   display: grid;
@@ -79,7 +97,6 @@
   }
 }
 
-
 .loginmain {
   display: flex;
   flex-direction: column;
@@ -95,19 +112,39 @@
   height: 84vh;
 }
 
-
-@media screen and (max-width: 695px) {
+// @media screen and (max-width: 695px) {
+//   .statcontainer {
+//     font-size: 3.3vw;
+//   }
+// }
+// @media screen and (max-height: 650px) {
+//   .statcontainer {
+//     font-size: 4.5vh;
+//   }
+// }
+// @media screen and (max-height: 280px) {
+//   .statcontainer {
+//     font-size: 3.3vw;
+//   }
+// }
+@media screen and (max-height: 600px) {
   .statcontainer {
-    font-size: 3.3vw;
+    &__text {
+      font-size: 5vh;
+    }
   }
 }
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 270px) {
   .statcontainer {
-    font-size: 4.5vh;
+    &__text {
+      font-size: 7vh;
+    }
   }
 }
-@media screen and (max-height: 280px) {
+@media screen and (max-width: 320px) {
   .statcontainer {
-    font-size: 3.3vw;
+    &__text {
+      font-size: 6vw;
+    }
   }
 }

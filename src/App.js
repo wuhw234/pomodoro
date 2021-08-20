@@ -3,6 +3,7 @@ import Main from "./Main";
 import Customize from "./Customize";
 import Signup from "./Signup";
 import Login from "./Login";
+import Error from "./Error";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/signup">
             <Signup />
           </Route>
+          <Route path="*"><Error /></Route>
         </Switch>
       </Router>
     </>

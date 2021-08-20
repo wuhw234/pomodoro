@@ -29,7 +29,7 @@ const Navbar = ({ background, page }) => {
             setClicked(!clicked);
           }}
           className="header__toggle"
-          size={40}
+          size={30}
         />
       )}
 

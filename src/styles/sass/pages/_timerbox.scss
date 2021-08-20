@@ -9,8 +9,9 @@
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  border-radius: 20px;
   animation: fadeIn 1s;
+  min-height: 50vh;
+  min-width: 45vw;
 
   &--break {
     background-color: $color-dark-turqoise;
@@ -52,7 +53,6 @@
 @media screen and (max-width: 690px) {
   .timerbox {
     padding: 20px;
-    border-radius: 20px;
 
     &--break {
       text-shadow: 0.3em 0.3em 0 $color-purple;
@@ -71,14 +71,16 @@
       font-weight: 900;
       color: white;
     }
+    &__label {
+      font-size: 5vw;
+    }
   }
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 300px) {
   .timerbox {
     height: 76vh;
     padding: 20px;
-    border-radius: 20px;
 
     &--break {
       text-shadow: 0.5rem 0.5rem 0 $color-purple;
@@ -90,6 +92,9 @@
 
     &--longbreak {
       text-shadow: 0.5rem 0.5rem 0 $color-dark-turqoise;
+    }
+    &__label {
+      font-size: 10vh;
     }
 
     &__time {

@@ -61,7 +61,7 @@ const Main = () => {
           />
         ) : (
           <div className="statcontainer">
-            <div style={{ color: "#f8f8ff", marginBottom: "5px" }}>
+            <div className="statcontainer__text">
               Study time: <b>x hours</b>, visualized in 2h{" "}
               <a
                 href="#"

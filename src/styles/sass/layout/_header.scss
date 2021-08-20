@@ -23,6 +23,9 @@
   &--signup {
     background-color: $color-tan;
   }
+  &--error {
+    background-color: $color-grey-dark;
+  }
 
   &__title {
     font-family: "Notable", sans-serif;
@@ -104,7 +107,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .header {
     justify-content: center;
   }
@@ -138,7 +141,7 @@
     background-color: $color-light-pink;
     width: 100%;
     position: absolute;
-    top: 24vh;
+    top: 16vh;
     left: 0;
     opacity: 1;
     z-index: 100;
@@ -149,22 +152,11 @@
     flex-direction: column;
     background-color: $color-light-pink;
     width: 100%;
+    z-index: 100;
     position: absolute;
     top: 5.1rem;
     left: -100%;
     opacity: 0;
     transition: all 0.5s ease;
-  }
-}
-
-@media screen and (max-height: 400px) {
-  .header__navlinks {
-    top: 16vh;
-  }
-}
-
-@media screen and (min-height: 401px) {
-  .header__navlinks {
-    top: 16vh;
   }
 }

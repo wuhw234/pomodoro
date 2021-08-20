@@ -13,8 +13,21 @@ const Login = () => {
     <>
       <Navbar background="login" page="login" />
       <div className="login">
-        <div className={`container ${signIn ? "right-panel-active" : ""}`} id="container">
-          <div className="form-container sign-up-container">
+        <div
+          className={`container ${signIn ? "right-panel-active" : ""}`}
+          id="container"
+        >
+          <div
+            className="form-container sign-up-container"
+          >
+            <button
+              className="switchbtn"
+              onClick={() => {
+                setSignIn(!signIn);
+              }}
+            >
+              Log In
+            </button>
             <form action="#">
               <h1>Register</h1>
               <input type="text" placeholder="Name" />
@@ -23,7 +36,17 @@ const Login = () => {
               <button>Sign Up</button>
             </form>
           </div>
-          <div className="form-container sign-in-container">
+          <div
+            className="form-container sign-in-container"
+          >
+            <button
+              className="switchbtn"
+              onClick={() => {
+                setSignIn(!signIn);
+              }}
+            >
+              Sign Up
+            </button>
             <form action="#">
               <h1>Sign in</h1>
               <input type="email" placeholder="Email" />
@@ -36,9 +59,7 @@ const Login = () => {
             <div className="overlay">
               <div className="overlay-panel overlay-left">
                 <h1>Welcome Back!</h1>
-                <p>
-                  Log in to your account and start adding blocks!
-                </p>
+                <p>Log in to your account and start adding blocks!</p>
                 <button
                   className="ghost"
                   id="signIn"
