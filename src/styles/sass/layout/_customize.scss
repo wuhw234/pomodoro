@@ -33,7 +33,10 @@
       transform: translateY(-1px);
     }
   }
-  input {
+  input, select {
+    font-size: 2rem;
+    background-color: $color-offwhite;
+    padding: .43rem 1rem;
     width: 100%;
   }
   h1 {
@@ -42,7 +45,7 @@
   }
   label {
     font-size: 1.3rem;
-      margin: .5rem;
+      margin: .3rem;
   }
   .slider {
     border-radius: 0px;

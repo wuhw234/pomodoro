@@ -601,14 +601,17 @@ html {
       transform: translateY(-0.2rem); }
     .customizecontainer button:active {
       transform: translateY(-1px); }
-  .customizecontainer input {
+  .customizecontainer input, .customizecontainer select {
+    font-size: 2rem;
+    background-color: #eee;
+    padding: .43rem 1rem;
     width: 100%; }
   .customizecontainer h1 {
     margin: 2rem;
     text-align: center; }
   .customizecontainer label {
     font-size: 1.3rem;
-    margin: .5rem; }
+    margin: .3rem; }
   .customizecontainer .slider {
     border-radius: 0px;
     width: 100%;
